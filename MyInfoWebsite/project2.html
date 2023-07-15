@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myinfo</title>
+    <!-- Linking bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Adding  google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Creating Javascript File -->
+    <script>
+        function theme() {
+            var elem = document.getElementById("theme").value;
+            if (elem == "moon") {
+                document.getElementsByTagName("body")[0].style.background = "#1e1d1d";
+                document.getElementsByTagName("body")[0].style.color = "white";
+                document.getElementById("light").style.display = "none";
+                document.getElementById("dark").style.opacity = "1";
+            }
+            else {
+                document.getElementsByTagName("body")[0].style.background = "white";
+                document.getElementsByTagName("body")[0].style.color = "black";
+                document.getElementById("light").style.display = "block";
+                document.getElementById("dark").style.opacity = "0";
+            }
+        }
+    </script>
+
+    <!-- Creating Css file -->
+
+    <style>
+        body {
+            overflow-x: hidden;
+            font-family: 'Crimson Text', serif;
+            font-size: medium;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 20vh;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .container1 {
+            width: 100%;
+            height: 8vh;
+        }
+
+        .container2 {
+            width: 100%;
+            height: 30vh;
+        }
+
+        .content {
+            width: 50%;
+            height: 10vh;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @media screen and (max-width:1300px) {
+            .container {
+                height: 25vh;
+            }
+
+            .content {
+                height: 20vh;
+            }
+        }
+
+        @media screen and (max-width:800px) {
+            .container {
+                height: 40vh;
+            }
+
+            .content {
+                height: 30vh;
+            }
+        }
+
+        #dark:hover {
+            transition-duration: 2s;
+            transform: rotate(360deg);
+        }
+
+        #light:hover {
+            transition-duration: 2s;
+            transform: rotate(360deg);
+
+        }
+    </style>
+
+    <!-- creating Navigation bar -->
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <a class="navbar-brand" id="user" href="project2.html"><b>My Info</b></a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="index.html">Home</a>
+                </li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="mailto:rijuk2043@gmail.com">Contact us</a></li>
+                <li><a><select onchange="theme()" id="theme" style="border-radius:10px; padding: 2px;">
+                            <option>Auto</option>
+                            <option value="moon" id="moon">Dark Theme</option>
+                            <option value="sun">Light Theme</option>
+                        </select></a></li>
+                <li><a><img src="/sun.png" id="light" style="width: 22px; height: 22px;"></a></li>
+                <li><a><img src="/moon.jpg" id="dark" style="width: 17px; height: 17px; opacity: 0;"></a></li>
+            </ul>
+        </div>
+    </nav>
+    <div>
+        <h1 class="js" style="text-align: center;"></h1>
+    </div>
+    <h2 style="text-align: center;">Some words about this project</h2>
+    <div class="container">
+        <div class="content">
+            <p>This project represents a Portfolio website. A Portfolio website is a unique way to showcase one's
+                works and let others know about oneself. I have mentioned my hobbies and some of my projects in my
+                website.
+                I have used HTML, CSS, Javascript and bootstrap to build this website.
+            </p>
+        </div>
+    </div>
+    <h2 style="text-align: center;">What is the purpose of this project</h2>
+    <div class="container1">
+        <p style="text-align: center;">
+            I have developed this website to share my hobbies and my projects.
+        </p>
+    </div>
+    <h2 style="text-align: center;">Lets make a short trip to my website</h2>
+    <div class="container2">
+        <p style="text-align: center;">I have provided source code of my website into my github repository</p>
+        <p style="text-align: center;">To checkout my github profile please click on the following link</p>
+        <p style="text-align: center;"><a href="https://github.com/pritam071102" target="_main">My github profile</a>
+        </p>
+        <p style="text-align: center;"><b>Website link is not available because you are already in the website</b></p>
+    </div>
+</body>
+
+</html>

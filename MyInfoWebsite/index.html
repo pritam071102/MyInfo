@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pritam Kundu</title>
+  <!-- Linking bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<!-- linking Css and Javascript file -->
+
+<link rel="stylesheet" href="style.css">
+<script src="app.js"></script>
+<!-- Adding  google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
+  rel="stylesheet">
+
+<body>
+  <!-- Creating Navigation bar -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+        <a class="navbar-brand" id="user" href="index.html"><b>Welcome</b></a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a href="index.html">Home</a>
+        </li>
+        <li><a href="/about.html" target="_main">About</a></li>
+        <li><a href="mailto:rijuk2043@gmail.com">Contact us</a></li>
+        <li><a><select onchange="theme()" id="theme">
+              <option>Auto</option>
+              <option value="moon" id="moon">Dark Theme</option>
+              <option value="sun">Light Theme</option>
+            </select></a></li>
+        <li><a><img src="/sun.png" id="light" style="width: 22px; height: 22px;"></a></li>
+        <li><a><img src="/moon.jpg" id="dark" style="width: 17px; height: 17px; opacity: 0;"></a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- creating Info.. -->
+  <div class="info">
+    <div id="img">
+      <img src="/riju3.jpg" class="img" alt="Check your network!!...">
+    </div>
+    <div class="bio">
+      <p>Myself <b>Pritam Kundu</b>, I'm an engineering student. I have built this website</p>
+      <p>to share some of my basic informations with my readers. In this website I have</p>
+      <p>mentioned my hobbies, projects .</p>
+
+    </div>
+  </div>
+  <!-- creating hobbies -->
+  <div class="heading">
+    <h2><b><i>My Hobbies</i></b></h2>
+  </div>
+  <div class="hobby">
+    <div class="hobby1">
+      <div><img class="imgs" src="/writing.jpeg">
+        <figcaption style="text-align: center;">Writing</figcaption>
+      </div>
+      <div><button onclick="clickfun5()" class="btn btn-primary" style="padding: 10px;">Checkout</button></div>
+    </div>
+    <div class="hobby2">
+      <div><img class="imgs" src="/invest.jpg">
+        <figcaption style="text-align: center;">Investing</figcaption>
+      </div>
+      <div><button onclick="clickfun4()" id="btn" class="btn btn-primary" style="padding: 10px;">Checkout</button></div>
+    </div>
+    <div class="hobby3">
+      <div><img class="imgs" src="/coding.jpeg">
+        <figcaption style="text-align: center;">Programming</figcaption>
+      </div>
+      <div><button onclick="clickfun3()" class="btn btn-primary"
+          style="padding: 10px; border-radius: 5px;">Checkout</button></div>
+    </div>
+  </div><br><br>
+  <!-- creating Project Section -->
+  <div class="heading">
+    <h2><b><i>My Projects</i></b></h2>
+  </div>
+  <div class="project">
+    <div class="project1">
+      <div><img src="/project.jpg" class="imgs">
+        <figcaption style="text-align: center;">Blog Website</figcaption>
+      </div>
+      <div><button onclick="clickfun1()" class="btn btn-primary"
+          style="padding: 10px; border-radius: 5px;">Checkout</button></div>
+    </div>
+    <div class="project2">
+      <div><img src="/project1.jpg" class="imgs">
+        <figcaption style="text-align: center;">Portfolio Website</figcaption>
+      </div>
+      <div><button onclick="clickfun2()" class="btn btn-primary"
+          style="padding: 10px; border-radius: 5px;">Checkout</button></div>
+    </div>
+  </div>
+</body>
+<footer>
+  <hr>
+  <div>
+    <p style="text-align: center; color: white;">&copy; 2023 Pritam Kundu</p>
+  </div>
+  <div class="foot">
+    <div class="fb"><a href="https://www.facebook.com/profile.php?id=100034281213509&mibextid=ZbWKwL"
+        target="_main"><img src="/fb.png" style="width: 50px; height: 50px;"></a></div>
+    <div class="git"><a href="https://github.com/pritam071102" target="_main"><img src="/git.png"
+          style="width: 50px; height: 50px;"></a></div>
+    <div class="insta"><a href="https://instagram.com/pritam_kundu0711?igshid=ZDc4ODBmNjlmNQ==" target="_main"><img
+          src="/insta.jpg" style="width: 50px; height: 50px; border-radius: 50%;"></a></div>
+    <div class="linkdin"><a href="https://in.linkedin.com/" target="_main"><img src="/linkdin.jpg"
+          style="width: 50px; height: 50px; border-radius: 50%;"></a></div>
+    <div class="twit"><a href="https://twitter.com/i/flow/login?redirect_after_login=%2Flogin%3Flang%3Den"
+        target="_main"><img src="/twitter.jpg" style="width: 50px; height: 50px; border-radius: 50%;"></a></div>
+  </div>
+</footer>
+
+</html>

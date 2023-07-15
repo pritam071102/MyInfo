@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobby-Investing</title>
+    <!-- Linking bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Adding  google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Creating Javascript File -->
+    <script>
+        function theme() {
+            var elem = document.getElementById("theme").value;
+            if (elem == "moon") {
+                document.getElementsByTagName("body")[0].style.background = "#1e1d1d";
+                document.getElementsByTagName("body")[0].style.color = "white";
+                document.getElementById("light").style.display = "none";
+                document.getElementById("dark").style.opacity = "1";
+                document.getElementsByTagName("table")[0].style.borderColor = "white";
+                for (var i = 0; i < 24; i++) {
+                    document.getElementsByTagName("td")[i].style.borderColor = "white";
+                }
+                for (var i = 0; i < 3; i++) {
+                    document.getElementsByTagName("th")[i].style.borderColor = "white";
+                }
+            }
+            else {
+                document.getElementsByTagName("body")[0].style.background = "white";
+                document.getElementsByTagName("body")[0].style.color = "black";
+                document.getElementById("light").style.display = "block";
+                document.getElementById("dark").style.opacity = "0";
+                document.getElementsByTagName("table")[0].style.borderColor = "black";
+                for (var i = 0; i < 24; i++) {
+                    document.getElementsByTagName("td")[i].style.borderColor = "black";
+                }
+                for (var i = 0; i < 3; i++) {
+                    document.getElementsByTagName("th")[i].style.borderColor = "black";
+                }
+            }
+        }
+    </script>
+
+    <!-- Creating Css file -->
+
+    <style>
+        body {
+            overflow-x: hidden;
+            font-family: 'Crimson Text', serif;
+            font-size: medium;
+        }
+
+
+        #dark:hover {
+            transition-duration: 2s;
+            transform: rotate(360deg);
+        }
+
+        #light:hover {
+            transition-duration: 2s;
+            transform: rotate(360deg);
+
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 20vh;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .content {
+            width: 50%;
+            height: 10vh;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @media screen and (max-width:850px) {
+            .container {
+                height: 30vh;
+            }
+        }
+
+        @media screen and (max-height:500px) {
+            .container {
+                height: 45vh;
+            }
+        }
+
+        .tableitems {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        td,
+        th,
+        table {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+
+    <!-- creating Navigation bar -->
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" id="user" href="investing.html"><b>Investing</b></a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="index.html">Home</a>
+                </li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="mailto:rijuk2043@gmail.com">Contact us</a></li>
+                <li><a><select onchange="theme()" id="theme" style="border-radius:10px; padding: 2px;">
+                            <option>Auto</option>
+                            <option value="moon" id="moon">Dark Theme</option>
+                            <option value="sun">Light Theme</option>
+                        </select></a></li>
+                <li><a><img src="/sun.png" id="light" style="width: 22px; height: 22px;"></a></li>
+                <li><a><img src="/moon.jpg" id="dark" style="width: 17px; height: 17px; opacity: 0;"></a></li>
+            </ul>
+        </div>
+    </nav>
+    <h2 style="text-align: center;">Some words about this Hobby</h2>
+    <div class="container">
+        <div class="content">
+            <p>Investing is putting money to work for a period of time in some sort of assets. I invest my wealth
+                only into the stock markets. It is a very risky way to inrease your money but with proper research
+                and analysis one can earn tremendous profit from the stock market.
+            </p>
+        </div>
+    </div>
+    <h2 style="text-align: center;">My Opinion on Market</h2>
+    <div class="container">
+        <div class="content">
+            <p>I have been investing money in different assets since five years. I have started with Stock market
+                investing but I also prefer <b>mutual fund investing, investing in government securities like bonds.</b>
+                I think that stock market is the great option only for long term investors.
+            </p>
+        </div>
+    </div><br><br>
+    <h2 style="text-align: center;">Let's have a look on my portfolio</h2>
+    <div>
+        <p style="text-align: center;">I'm currently invested in the following companies.
+            I have Shared my holdings. It is not a recomandation.</p>
+    </div><br>
+    <div class="tableitems">
+        <table>
+            <thead>
+                <tr>
+                    <th>Serial No</th>
+                    <th style="text-align: center;">Stocks Name</th>
+                    <th>No of Shares</th>
+                </tr>
+            </thead>
+            <tbody style="text-align: center;">
+                <tr>
+                    <td>1</td>
+                    <td>Tata Steel</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>NHPC</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Wipro</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>IRFC</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Indian Oil Corporation</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>CESC</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Rail Vikas Nigam</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Tata Motors</td>
+                    <td>10</td>
+                </tr>
+            </tbody>
+        </table>
+    </div><br><br>
+</body>
+
+</html>

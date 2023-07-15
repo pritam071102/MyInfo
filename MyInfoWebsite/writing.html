@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobby-Writing</title>
+    <!-- Linking bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Adding  google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Creating Javascript File -->
+    <script>
+        function theme() {
+            var elem = document.getElementById("theme").value;
+            if (elem == "moon") {
+                document.getElementsByTagName("body")[0].style.background = "#1e1d1d";
+                document.getElementsByTagName("body")[0].style.color = "white";
+                document.getElementById("light").style.display = "none";
+                document.getElementById("dark").style.opacity = "1";
+            }
+            else {
+                document.getElementsByTagName("body")[0].style.background = "white";
+                document.getElementsByTagName("body")[0].style.color = "black";
+                document.getElementById("light").style.display = "block";
+                document.getElementById("dark").style.opacity = "0";
+            }
+        }
+    </script>
+
+    <!-- Creating Css file -->
+
+    <style>
+        body {
+            overflow-x: hidden;
+            font-family: 'Crimson Text', serif;
+            font-size: medium;
+        }
+
+
+        #dark:hover {
+            transition-duration: 2s;
+            transform: rotate(360deg);
+        }
+
+        #light:hover {
+            transition-duration: 2s;
+            transform: rotate(360deg);
+
+        }
+
+        .container,
+        .container1 {
+            position: relative;
+            width: 100%;
+            height: 25vh;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .content {
+            width: 50%;
+            height: 10vh;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .purpose {
+            width: 50%;
+            height: 10vh;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+
+        @media screen and (max-width:850px) {
+            .container {
+                height: 50vh;
+            }
+
+            .content {
+                height: 27vh;
+            }
+        }
+
+        @media screen and (max-height:500px) {
+
+            .container,
+            .container1 {
+                height: 65vh;
+            }
+
+            .content {
+                height: 40vh;
+            }
+        }
+    </style>
+
+    <!-- creating Navigation bar -->
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" id="user" href="writing.html"><b>Writing</b></a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="index.html">Home</a>
+                </li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="mailto:rijuk2043@gmail.com">Contact us</a></li>
+                <li><a><select onchange="theme()" id="theme" style="border-radius:10px; padding: 2px;">
+                            <option>Auto</option>
+                            <option value="moon" id="moon">Dark Theme</option>
+                            <option value="sun">Light Theme</option>
+                        </select></a></li>
+                <li><a><img src="/sun.png" id="light" style="width: 22px; height: 22px;"></a></li>
+                <li><a><img src="/moon.jpg" id="dark" style="width: 17px; height: 17px; opacity: 0;"></a></li>
+            </ul>
+        </div>
+    </nav>
+    <h2 style="text-align: center;">Some words about this Hobby</h2>
+    <div class="container">
+        <div class="content">
+            <p>
+                We all need a way to express ourselves whether
+                that be through a creative outlet like art or fashion. For others, it's<b> writing.</b>
+            </p>Creative writing allows self-expression, investigating varied worlds and characters, and
+            serves as an escape from daily life. Writing is not exclusive to just novelists and poets;
+            anyone can participate as writing stories, articles,
+            or keeping a journal presents a fulfilling opportunity to make the most of your downtime.
+        </div>
+    </div><br><br>
+    <h2 style="text-align: center;">Journey with Writing</h2>
+    <div class="container1">
+        <div class="purpose">
+            <p>I started my writing Journey, when i was just seven years old. I can remember my first writing was based
+                on
+                experiences of my first day on primary school. Though i started with stories i like to write
+                <b>poetries</b> most.
+                From my childhood i have written many stories, poetries and many other creative writings.
+                Currently I'm working on <b>Blog Writing</b>, besides others.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
